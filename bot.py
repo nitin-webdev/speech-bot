@@ -120,8 +120,8 @@ if __name__ == '__main__':
 
         elif "use calculator" in command:
             question = take_command()
-            app_id = "876HYT-AGQWG5W4JG"
-            client = wolframalpha.Client('R2K75H-7ELALHR35X')
+            app_id = "your unique key"
+            client = wolframalpha.Client('client key')
             res = client.query(question)
             answer = next(res.results).text
             speak(answer)
@@ -130,15 +130,15 @@ if __name__ == '__main__':
         elif "solve questions" in command or "solve question" or "have a question" in command:
             speak("Tell me your question")
             question = take_command()
-            app_id = "876HYT-AGQWG5W4JG"
-            client = wolframalpha.Client('R2K75H-7ELALHR35X')
+            app_id = "your unique key"
+            client = wolframalpha.Client('client key')
             res = client.query(question)
             answer = next(res.results).text
             speak(answer)
             print(answer)
 
         elif "weather" in command:
-            api_key = "b146fcc9f98dc66f1a457c11ec454c54"
+            api_key = "open weather api key"
             base_url = "https://api.openweathermap.org/data/2.5/weather?"
             speak("what is the city name")
             city_name = take_command()
